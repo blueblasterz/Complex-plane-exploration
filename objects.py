@@ -1,7 +1,6 @@
 from abc import ABC, abstractmethod
 
 import numpy as np
-
 from camera import Camera
 
 __all__ = ["DisplayObject"]
@@ -46,7 +45,7 @@ class Mandelbrot(DisplayObject):
         val = 0
         iteration = 0
         while abs(val) < 2 and iteration < self.max_iter:
-            val = val * val + x
+            val = val * val + x + y * 1j
             iteration += 1
 
         return iteration
